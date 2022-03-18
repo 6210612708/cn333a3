@@ -39,11 +39,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-//fun randomNumber(): Int {
-//    val r = java.util.Random(0)
-//    var number = r.nextInt(1000)
-//    return number
-//}
 
 var random : Int = nextInt(1,1000)
 var count: Int = 0
@@ -51,10 +46,7 @@ var cont: Boolean = true
 
 @Composable
 fun GuessingNumber() {
-//    var random = randomNumber()
-//    var count by remember { mutableStateOf(0) }
 
-//    var cont by remember { mutableStateOf(true) }
     val textState = remember { mutableStateOf(TextFieldValue()) }
     var answer by rememberSaveable { mutableStateOf("") }
     var button by rememberSaveable { mutableStateOf("Submit") }
@@ -136,14 +128,6 @@ fun GuessingNumber() {
             focusedIndicatorColor = Color.Transparent, //hide the indicator
             unfocusedIndicatorColor = White),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-//            label = { Text("Your number",
-//                        fontSize = 16.sp,
-//                        textAlign = TextAlign.Center,
-//
-//                        modifier = Modifier
-//                            .padding(3.dp)
-//                            .fillMaxWidth()
-//                ) }
         )
 //        Text("Your answer is: " + textState.value.text)
 
@@ -172,18 +156,3 @@ fun GuessingNumber() {
     }
 }
 
-//@Composable
-//fun reset() {
-//    val textState = remember { mutableStateOf(TextFieldValue()) }
-//    var answer by rememberSaveable { mutableStateOf("") }
-//    var button by rememberSaveable { mutableStateOf("") }
-//
-//    answer = "Please enter your guess:"
-//    button = "Submit"
-//    val random = randomNumber()
-//
-//
-//
-//
-//
-//}
